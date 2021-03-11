@@ -1,0 +1,46 @@
+.advantages
+    padding: 32px 0 50px
+    &__title
+        margin-bottom: 70px
+    &__inner
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-template-rows: repeat(2, minmax(219px, min-content))
+        grid-gap: 20px
+    &__card
+        position: relative
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        padding: 24px 22px 33px 28px
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1)
+        border-radius: 20px 20px 0px 20px
+        width: 285px
+        min-height: 100%
+        &::after,
+        &::before
+            content: ''
+            position: absolute
+            right: 0
+            bottom: 0
+            background-color: $accent-color
+        &::after
+            width: 2px
+            height: 48px
+        &::before
+            width: 48px
+            height: 2px
+        &-icon
+            width: 48px
+            height: 48px
+            margin-bottom: 16px
+        &-title
+            font-family: 'Gilroy Bold', sans-serif
+            font-size: 18px
+            line-height: 22px
+            color: $text-color
+            margin-bottom: 12px
+        &-text
+            color: #363636
+            line-height: 16px
+            
