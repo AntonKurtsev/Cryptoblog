@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    // Плавный скролл к секциям
+    // Smooth scroll to section
     const smoothLinks = document.querySelectorAll('a[href^="#"]');
     console.log(smoothLinks.length);
     for (let smoothLink of smoothLinks) {
