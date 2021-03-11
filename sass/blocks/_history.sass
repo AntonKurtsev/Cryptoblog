@@ -26,29 +26,37 @@
                 left: 0
                 z-index: -1
     &__text
-        position: relative
-        height: 384px
-        overflow-y: hidden
         font-size: 16px
         line-height: 38px
         color: #2C2C2C
-        &::after
-            content: ''
-            position: absolute
-            bottom: 0
-            left: 0
-            width: 100%
-            height: 180px
-            background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)
-            transform: rotate(180deg)
         &-block
+            position: relative
             max-width: 600px
+            height: 384px
+            overflow-y: hidden
+            transition: all 0.5s
+            &::after
+                content: ''
+                position: absolute
+                bottom: 0
+                left: 0
+                width: 100%
+                height: 180px
+                background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)
+                transform: rotate(180deg)
+                transition: all 0.7s
+        &-block.-maximized
+            &::after
+                height: 0
     &__btn
         position: relative
         margin-top: 20px
+        width: 95px
+        height: 19px
         font-size: 16px
         line-height: 100%
         color: #2C2C2C
+        transition: all 0.5s
         &::after
             content: ''
             position: absolute
@@ -57,3 +65,28 @@
             width: 95px
             height: 1px
             background-color: $accent-color
+            z-index: -1
+            transition: all 0.5s
+        @media (min-width: 769px)
+            &:hover
+                color: #fff
+                &::after
+                    height: 22px
+                    width: 100px
+                    left: -5px
+                    border-radius: 2px
+    &__btn.-maximized > &__maximize
+        opacity: 0
+    &__btn.-maximized > &__minimize
+        opacity: 1
+    &__maximize,
+    &__minimize
+        position: absolute
+        bottom: 0
+        left: 0
+        transition: opacity 0.3s
+    &__maximize
+        opacity: 1
+    &__minimize
+        opacity: 0
+    
