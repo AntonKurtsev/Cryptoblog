@@ -67,6 +67,55 @@ ul, li
         font-family: 'Gilroy Bold'
         font-size: 16px
         color: #676767
+.modal
+    position: fixed
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+    z-index: 5
+    &-overlay
+        position: absolute
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.35)
+    &-inner
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        padding: 42px 33px 37px
+        background-color: #fff
+        text-align: center
+        display: flex
+        flex-direction: column
+        align-items: center
+        border-radius: 10px
+    &-title
+        font-family: 'Gilroy Bold', sans-serif
+        font-size: 25px
+        line-height: 100%
+        color: $text-color
+    &-btn
+        width: 100%
+        padding: 15px
+        background-color: $accent-color
+        font-family: 'Gilroy Bold', sans-serif
+        font-size: 16px
+        line-height: 100%
+        color: #fff
+        border: 3px solid $accent-color
+        border-radius: 50px
+        transition: all 0.3s
+        @media (min-width: 769px)
+            &:hover
+                color: $accent-color
+                background-color: #fff
+
 
 
 

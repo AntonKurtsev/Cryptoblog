@@ -230,5 +230,61 @@
         <!-- /.container -->
     </footer>
 
+    <div class="main-form modal">
+        <div class="main-form__overlay modal-overlay"></div>
+        <!-- /.main-from__overlay -->
+        <div class="main-form__inner modal-inner">
+            <h5 class="main-form__title modal-title">Текст формы</h5>
+            <input type="text" class="main-form__input" placeholder="Имя">
+            <input type="tel" class="main-form__input" placeholder="Номер телефона">
+            <input type="email" class="main-form__input" placeholder="Почта">
+            <button class="main-form__btn modal-btn" type="submit">Отправить</button>
+        </div>
+        <!-- /.main-form__inner -->
+    </div>
+    <!-- /.main-form -->
+    
+    <div class="confirmation-form modal">
+        <div class="confirmation-form__overlay modal-overlay"></div>
+        <!-- /.confirmation-from__overlay -->
+        <div class="confirmation-form__inner modal-inner">
+            <h5 class="confirmation-form__title modal-title">Подтверждение</h5>
+            <p class="confirmation-form__text">Введите последниее 4 цифры номера с которого мы вам звоним</p>
+            <input type="tel" class="confirmation-form__input">
+            <h5 class="confirmation-form__choose-title modal-title">Выберите удобное время</h5>
+            <div class="confirmation-form__radio-group">
+                <label class="confirmation-form__radio">
+                    <input name='call-time' type="radio" class="confirmation-form__checkbox-radio" checked>
+                    <span class="confirmation-form__checkbox-radio-style"></span>
+                    Сегодня 15:00
+                </label>
+                <label class="confirmation-form__radio">
+                    <input name='call-time' type="radio" class="confirmation-form__checkbox-radio">
+                    <span class="confirmation-form__checkbox-radio-style"></span>
+                    Сегодня 16:00
+                </label>
+                <label class="confirmation-form__radio">
+                    <input name='call-time' type="radio" class="confirmation-form__checkbox-radio">
+                    <span class="confirmation-form__checkbox-radio-style"></span>
+                    Сегодня 17:00
+                </label>
+                <label class="confirmation-form__radio">
+                    <input name='call-time' type="radio" class="confirmation-form__checkbox-radio">
+                    <span class="confirmation-form__checkbox-radio-style"></span>
+                    Сегодня 18:00
+                </label>
+                <label class="confirmation-form__radio">
+                    <input name='call-time' type="radio" class="confirmation-form__checkbox-radio">
+                    <span class="confirmation-form__checkbox-radio-style"></span>
+                    Сегодня 19:00
+                </label>
+            </div>
+            <!-- /.radio-group -->
+            <button class="confirmation-form__btn modal-btn" type="submit">Отправить</button>
+        </div>
+        <!-- /.confirmation-form__inner -->
+    </div>
+    <!-- /.confirmation-form -->
+
 </body>
 </html>

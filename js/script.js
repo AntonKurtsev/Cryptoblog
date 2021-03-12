@@ -19,6 +19,35 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     };
 
+    // Modals
+    const registrationBtn = document.querySelector('.hero__btn-wrapper');
+    const mainForm = document.querySelector('.main-form');
+    const mainFormOverlay = document.querySelector('.main-form__overlay');
+    const mainFormBtn = document.querySelector('.main-form__btn');
+    const confirmationForm = document.querySelector('.confirmation-form');
+    const confirmationFormOverlay = document.querySelector('.confirmation-form__overlay');
+
+    function closeMainForm() {
+        mainForm.classList.remove('-active');
+    };
+    function closeConfirmationForm() {
+        confirmationForm.classList.remove('-active');
+    };
+
+    registrationBtn.addEventListener('click', () => {
+        mainForm.classList.add('-active');
+    });
+    mainFormOverlay.addEventListener('click', () => {
+        closeMainForm();
+    });
+    mainFormBtn.addEventListener('click', () => {
+        closeMainForm();
+        confirmationForm.classList.add('-active');
+    });
+    confirmationFormOverlay.addEventListener('click', () => {
+        closeConfirmationForm();
+    });     
+
     // History text
     const historyBtn = document.querySelector('.history__btn');
     const historyTextBlock = document.querySelector('.history__text-block');

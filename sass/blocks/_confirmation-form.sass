@@ -1,0 +1,70 @@
+.confirmation-form
+    visibility: hidden
+    opacity: 0
+    transition: 0.5s all
+    &.-active
+        visibility: visible
+        opacity: 1
+    &__inner
+        width: 387px
+    &__title
+        margin-bottom: 20px
+    &__text
+        max-width: 281px
+        margin-bottom: 24px
+        font-size: 16px
+        line-height: 100%
+        color: #000
+    &__input
+        margin-bottom: 35px
+        padding: 9px 26px
+        border: none
+        outline: none
+        width: 152px
+        height: 52px
+        border-radius: 10px
+        background-color: #EDEDED
+    &__choose-title
+        margin-bottom: 34px
+    &__radio-group
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 100%
+        margin-bottom: 34px
+    &__radio
+        position: relative
+        font-size: 16px
+        line-height: 100%
+        color: #000
+    &__radio + &__radio
+        margin-top: 25px
+    &__checkbox-radio
+        width: 1px
+        height: 1px
+        position: absolute
+        clip: rect(0 0 0 0)
+        padding-left: 30px
+    &__checkbox-radio-style
+        position: absolute
+        margin-left: -30px
+        width: 18px
+        height: 18px
+        border: 1px solid $accent-color
+        border-radius: 5px
+        overflow: hidden
+        &::before
+            position: absolute
+            content: ''
+            width: 11px
+            height: 11px
+            left: 50%
+            top: 50%
+            opacity: 0
+            transform: translate(-50%, -50%)
+            transition: opacity 0.3s
+            background-color: $accent-color
+            border-radius: 3px
+.confirmation-form__checkbox-radio:checked + .confirmation-form__checkbox-radio-style::before
+    opacity: 1
+    transition: opacity 0.3s
