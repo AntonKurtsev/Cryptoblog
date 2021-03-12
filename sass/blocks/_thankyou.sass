@@ -24,15 +24,17 @@
     &-link
         display: inline-block
         margin-top: 51px
-        padding: 14px 70px
+        padding: 16px 70px
         background: #FA5656
         border-radius: 50px
-        border: 3px solid $accent-color
         font-family: 'Gilroy Bold', sans-serif
         font-size: 16px
         line-height: 100%
         color: #fff
         transition: all 0.3s
-        &:hover
-            color: $accent-color
-            background-color: #fff
+        &:focus
+            background-color: #D12424
+            box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.25)
+        @media (min-width: 769px)
+            &:hover
+                background-color: #E23838

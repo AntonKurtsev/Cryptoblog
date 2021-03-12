@@ -48,18 +48,19 @@
         top: 0
         right: 0
         height: 100%
-        padding: 16px 38px
+        padding: 18px 38px
         background-color: $accent-color
         font-size: 16px
         line-height: 19px
         color: #fff
-        border: 3px solid $accent-color
         border-radius: 10px
         transition: all 0.3s
+        &:focus
+            background-color: #D12424
+            box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.25)
         @media (min-width: 769px)
             &:hover
-                color: $accent-color
-                background-color: #fff
+                background-color: #E23838
     &__currency
         position: absolute
         left: 18px

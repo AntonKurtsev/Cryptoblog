@@ -1,5 +1,15 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+    // Change header on page scroll
+    window.onscroll = function() {
+        var header = document.querySelector('.header');
+        if ( window.pageYOffset > 70) {
+            header.classList.add("-scrolled");
+        } else {
+            header.classList.remove("-scrolled");
+        }
+    }
+
     // Smooth scroll to section
     const smoothLinks = document.querySelectorAll('a[href^="#"]');
     for (let smoothLink of smoothLinks) {
