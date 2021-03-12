@@ -58,5 +58,21 @@
                 transform-origin: right
             &:nth-last-child(2)
                 transform: scale(0)
-    .history-wrapper
-        flex-direction: column
+    .hero
+        &__btn
+            &-wrapper
+                right: 50%
+                transform: translateX(50%)
+    .history
+        &-wrapper
+            flex-direction: column
+        &__title
+            margin-bottom: 45px
+            &--fill
+                &::before
+                    width: 52px
+                    height: 45px
+        &__text
+            &-block
+                height: 265px
+                max-width: 100%

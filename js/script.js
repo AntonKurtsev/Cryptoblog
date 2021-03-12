@@ -66,7 +66,18 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     confirmationFormOverlay.addEventListener('click', () => {
         closeConfirmationForm();
-    });     
+    });
+
+    // Auto height for video
+    const heroWrapper = document.querySelector('.hero-wrapper');
+    function heroWrapperAutoHeight () {
+        let heroWrapperWidth = heroWrapper.getBoundingClientRect().width;
+        heroWrapper.style.height = ((heroWrapperWidth / 16) * 9) +'px';
+    };
+    heroWrapperAutoHeight();
+    window.addEventListener('resize', () => {
+        heroWrapperAutoHeight();
+    });
 
     // History text
     const historyBtn = document.querySelector('.history__btn');
