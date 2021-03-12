@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Smooth scroll to section
     const smoothLinks = document.querySelectorAll('a[href^="#"]');
-    console.log(smoothLinks.length);
     for (let smoothLink of smoothLinks) {
         smoothLink.addEventListener('click', function (e) {
             e.preventDefault();
@@ -16,8 +15,19 @@ document.addEventListener('DOMContentLoaded', function () {
                 behavior: 'smooth',
                 block: 'start'
             });
+            mobileMenu.classList.remove('-active');
+            openMobileBtn.classList.remove('-active');
         });
     };
+
+    // Mobile menu
+    const openMobileBtn = document.querySelector('.menu-btn');
+    const mobileMenu = document.querySelector('.header__nav');
+
+    openMobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('-active');
+        openMobileBtn.classList.toggle('-active');
+    });
 
     // Modals
     const registrationBtn = document.querySelector('.hero__btn-wrapper');
