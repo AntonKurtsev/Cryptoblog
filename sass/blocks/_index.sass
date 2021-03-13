@@ -16,11 +16,13 @@
         line-height: 17px
         color: #ffffff  
         border-radius: 21px
+        transition: all 0.3s
         &-inner
             display: inline-block
             padding: 13px 20px
             border-radius: 34px
             border: 1px solid $accent-color
+            transition: all 0.3s
         &-wrapper
             position: absolute
             right: 3%
@@ -29,3 +31,11 @@
             padding: 12px 23px
             border-radius: 46px
             border: 1px dashed $accent-color
+            transition: all 0.3s
+            @media (min-width: 769px)
+                &:hover
+                    border: 1px dashed #E23838
+                    .index__btn-inner
+                        border: 1px solid #E23838
+                    .index__btn
+                        background-color: #E23838
