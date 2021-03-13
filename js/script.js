@@ -83,6 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const historyBtn = document.querySelector('.history__btn');
     const historyTextBlock = document.querySelector('.history__text-block');
     const historyText = document.querySelector('.history__text');
+    const historyTextBlockHeightConst = historyTextBlock.getBoundingClientRect().height;
 
     historyBtn.addEventListener('click', () => {
         historyBtn.classList.toggle('-maximized');
@@ -94,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (historyTextHeight > historyTextBlockHeight) {
             historyTextBlock.style.height = historyTextHeight + 'px';
         } else {
-            historyTextBlock.style.height = 384 + 'px';
+            historyTextBlock.style.height = historyTextBlockHeightConst + 'px';
         };
     });
 
