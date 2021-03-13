@@ -37,23 +37,30 @@ ul, li
     max-width: 1230px
     margin: 0 auto
     padding: 0 15px
-.section-title
-    position: relative
-    display: inline-block
-    padding-right: 93px
-    font-family: 'Gilroy Bold'
-    font-size: 32px
-    line-height: 100%
-    color: $text-color
-    &::after
-        content: ''
-        position: absolute
-        right: 0
-        top: 50%
-        transform: translateY(-50%)
-        width: 80px
-        height: 2px
-        background-color: $accent-color
+.section
+    &-title
+        position: relative
+        display: inline-block
+        padding-right: 93px
+        font-family: 'Gilroy Bold'
+        font-size: 32px
+        line-height: 100%
+        color: $text-color
+        &::after
+            content: ''
+            position: absolute
+            right: 0
+            top: 50%
+            transform: translateY(-50%)
+            width: 80px
+            height: 2px
+            background-color: $accent-color
+    @media screen and (max-width: 548px)
+        &-title
+            font-size: 19px
+            padding-right: 58px
+            &::after
+                width: 48px
 .logo
     display: flex
     align-items: center
