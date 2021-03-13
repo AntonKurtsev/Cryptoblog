@@ -54,7 +54,8 @@ document.addEventListener('DOMContentLoaded', function () {
         confirmationForm.classList.remove('-active');
     };
 
-    registrationBtn.addEventListener('click', () => {
+    registrationBtn.addEventListener('click', (e) => {
+        e.preventDefault();
         mainForm.classList.add('-active');
     });
     mainFormOverlay.addEventListener('click', () => {
