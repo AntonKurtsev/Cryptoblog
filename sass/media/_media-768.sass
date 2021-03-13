@@ -64,15 +64,41 @@
                 right: 50%
                 transform: translateX(50%)
     .history
+        padding-bottom: 35px
         &-wrapper
             flex-direction: column
-        &__title
-            margin-bottom: 45px
-            &--fill
-                &::before
-                    width: 52px
-                    height: 45px
         &__text
             &-block
                 height: 265px
                 max-width: 100%
+    .advantages
+        &-inner
+            flex-wrap: nowrap
+            overflow-x: scroll
+        &__title
+            margin-bottom: 30px
+        &__card
+            min-width: 330px
+        &__card + &__card
+            margin-left: 15px
+    .reviews
+        &-wrapper
+            flex-wrap: nowrap
+            overflow-x: scroll
+        &__title
+            margin-bottom: 30px
+        &__card
+            margin: 0
+            min-width: 330px
+        &__card + &__card
+            margin-left: 15px
+    .partners
+        &-wrapper
+            flex-wrap: nowrap
+            overflow-x: scroll
+        &__title
+            margin-bottom: 20px
+        &__img
+            margin: 0
+        &__img + &__img
+            margin-left: 25px

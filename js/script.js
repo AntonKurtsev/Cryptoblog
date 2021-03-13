@@ -129,4 +129,4 @@ document.addEventListener('DOMContentLoaded', function () {
     calcInput.addEventListener('input', () => {
         calcResult.innerText = '';
     });
-})
+});
