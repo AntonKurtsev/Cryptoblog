@@ -109,6 +109,10 @@
         &-wrapper
             flex-wrap: nowrap
             overflow-x: scroll
+            -ms-overflow-style: none
+            scrollbar-width: none
+            &::-webkit-scrollbar 
+                display: none
         &__title
             margin-bottom: 20px
         &__img
