@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cryptoblog</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" defer></script>
     <script src="js/script.js" defer></script>
 </head>
 <body>
@@ -240,12 +243,39 @@
         <!-- /.main-from__overlay -->
         <div class="main-form__inner modal-inner">
             <h5 class="main-form__title modal-title">Текст формы</h5>
-            <!-- <form action="" method="" class="main-form__form modal-form"> -->
-                <input type="text" class="main-form__input" name="name" placeholder="Имя">
-                <input type="tel" class="main-form__input" name="phone" placeholder="Номер телефона">
-                <input type="email" class="main-form__input" name="email" placeholder="Почта">
-                <button class="main-form__btn modal-btn" type="">Отправить</button>
-            <!-- </form> -->
+            <form action="" method="" class="main-form__form modal-form">
+                <div class="main-form__input-block">
+                    <input 
+                    class="main-form__input" 
+                    type="text" 
+                    name="name" 
+                    placeholder="Имя"
+                    required
+                    >
+                </div>
+                <!-- /.main-form__input-block -->
+                <div class="main-form__input-block">
+                    <input 
+                    class="main-form__input phone-input" 
+                    type="tel" 
+                    name="phone" 
+                    placeholder="Номер телефона"
+                    required
+                    >
+                </div>
+                <!-- /.main-form__input-block -->
+                <div class="main-form__input-block">
+                    <input 
+                    class="main-form__input" 
+                    type="email" 
+                    name="email" 
+                    placeholder="Почта"
+                    required
+                    >
+                </div>
+                <!-- /.main-form__input-block -->
+                <button class="main-form__btn modal-btn" type="submit">Отправить</button>
+            </form>
         </div>
         <!-- /.main-form__inner -->
     </div>

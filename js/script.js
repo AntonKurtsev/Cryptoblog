@@ -55,18 +55,63 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     registrationBtn.addEventListener('click', (e) => {
-        e.preventDefault();
+        e.preventDefault();  
         mainForm.classList.add('-active');
     });
     mainFormOverlay.addEventListener('click', () => {
         closeMainForm();
     });
-    mainFormBtn.addEventListener('click', () => {
-        closeMainForm();
-        confirmationForm.classList.add('-active');
-    });
+    // mainFormBtn.addEventListener('click', () => {
+    //     closeMainForm();
+    //     confirmationForm.classList.add('-active');
+    // });
     confirmationFormOverlay.addEventListener('click', () => {
         closeConfirmationForm();
+    });
+
+    
+    // Mask input
+    $('.phone-input').mask('+38(999)999-99-99', {
+        translation: {
+            '9': {
+                    pattern: /[0-9]/,
+                    optional: true,
+                },
+            },
+        autoclear: false,
+    });
+
+    // Form validation
+    $('.main-form__form').each(function(){
+        $(this).validate({
+            errorClass: "input-invalid",
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2,
+                },
+                email: {
+                    required: true,
+                    email: true,
+                },
+                phone: {
+                    required: true,
+                },
+            },
+            messages: {
+                name: {
+                    required: "Пожалуйста введите ваше имя",
+                    minlength: jQuery.validator.format("Минимум 2 знака"),
+                },
+                email: {
+                    required: "Пожалуйста введите ваш Email",
+                    email: "Email должен быть вида: name@domain.com",
+                },
+                phone: {
+                    required: "Пожалуйста введите ваш телефон",
+                },
+            },
+        });
     });
 
     // Auto height for video
