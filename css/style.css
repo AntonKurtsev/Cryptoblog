@@ -99,11 +99,7 @@ ul, li {
       -ms-flex-align: center;
           align-items: center; }
   .logo__img {
-    margin-right: 13px;
-    width: 32px;
-    height: 32px;
-    border-radius: 10px;
-    background-color: #D9D9D9; }
+    height: 32px; }
   .logo__text {
     font-family: 'Gilroy Bold';
     font-size: 16px;
